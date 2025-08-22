@@ -34,8 +34,5 @@ pkgs.buildNpmPackage rec {
     homepage = "https://github.com/esm7/obsidian-vimrc-support";
     changelog = "https://github.com/esm7/obsidian-vimrc-support/releases/tag/${version}";
     license = lib.licenses.mit;
-    maintainers = with lib.maintainers; [
-      ev357
-    ];
   };
 }

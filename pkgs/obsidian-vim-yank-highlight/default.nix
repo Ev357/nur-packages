@@ -28,8 +28,5 @@ pkgs.buildNpmPackage rec {
     homepage = "https://github.com/aleksey-rowan/obsidian-vim-yank-highlight";
     changelog = "https://github.com/aleksey-rowan/obsidian-vim-yank-highlight/releases/tag/${version}";
     license = lib.licenses.mit;
-    maintainers = with lib.maintainers; [
-      ev357
-    ];
   };
 }

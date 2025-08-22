@@ -28,8 +28,5 @@ pkgs.buildNpmPackage rec {
     homepage = "https://github.com/lijyze/scroll-offset";
     changelog = "https://github.com/lijyze/scroll-offset/releases/tag/${version}";
     license = lib.licenses.mit;
-    maintainers = with lib.maintainers; [
-      ev357
-    ];
   };
 }

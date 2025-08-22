@@ -49,8 +49,5 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/mgmeyers/obsidian-style-settings";
     changelog = "https://github.com/mgmeyers/obsidian-style-settings/releases/tag/${version}";
     license = lib.licenses.gpl3;
-    maintainers = with lib.maintainers; [
-      ev357
-    ];
   };
 }

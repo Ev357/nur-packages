@@ -34,8 +34,5 @@ pkgs.buildNpmPackage rec {
     homepage = "https://github.com/kepano/obsidian-hider";
     changelog = "https://github.com/kepano/obsidian-hider/releases/tag/${version}";
     license = lib.licenses.mit;
-    maintainers = with lib.maintainers; [
-      ev357
-    ];
   };
 }

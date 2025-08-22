@@ -36,8 +36,5 @@ pkgs.buildNpmPackage rec {
     homepage = "https://lostpaul.github.io/obsidian-folder-notes";
     changelog = "https://github.com/LostPaul/obsidian-folder-notes/releases/tag/${version}";
     license = lib.licenses.agpl3Only;
-    maintainers = with lib.maintainers; [
-      ev357
-    ];
   };
 }

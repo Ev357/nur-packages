@@ -35,8 +35,5 @@ pkgs.buildNpmPackage rec {
     homepage = "https://github.com/phibr0/obsidian-commander";
     changelog = "https://github.com/phibr0/obsidian-commander/releases/tag/${version}";
     license = lib.licenses.mit;
-    maintainers = with lib.maintainers; [
-      ev357
-    ];
   };
 }

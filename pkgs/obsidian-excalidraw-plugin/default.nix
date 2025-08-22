@@ -30,8 +30,5 @@ pkgs.buildNpmPackage rec {
     homepage = "https://excalidraw-obsidian.online";
     changelog = "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/${version}";
     license = lib.licenses.mit;
-    maintainers = with lib.maintainers; [
-      ev357
-    ];
   };
 }
