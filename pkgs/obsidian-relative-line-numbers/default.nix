@@ -33,5 +33,6 @@ pkgs.buildNpmPackage rec {
     description = "Enables relative line numbers in editor mode";
     homepage = "https://github.com/nadavspi/obsidian-relative-line-numbers";
     changelog = "https://github.com/nadavspi/obsidian-relative-line-numbers/releases/tag/${version}";
+    license = lib.licenses.free;
   };
 }
