@@ -5,16 +5,20 @@
 # Having pkgs default to <nixpkgs> is fine though, and it lets you use short
 # commands such as:
 #     nix-build -A mypackage
-
-{ pkgs ? import <nixpkgs> { } }:
-
-{
+{pkgs ? import <nixpkgs> {}}: {
   # The `lib`, `modules`, and `overlays` names are special
-  lib = import ./lib { inherit pkgs; }; # functions
+  lib = import ./lib {inherit pkgs;}; # functions
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
-  example-package = pkgs.callPackage ./pkgs/example-package { };
-  # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
-  # ...
+  cmdr = pkgs.callPackage ./pkgs/cmdr {};
+  folder-notes = pkgs.callPackage ./pkgs/folder-notes {};
+  obsidian-excalidraw-plugin = pkgs.callPackage ./pkgs/obsidian-excalidraw-plugin {};
+  obsidian-git = pkgs.callPackage ./pkgs/obsidian-git {};
+  obsidian-hider = pkgs.callPackage ./pkgs/obsidian-hider {};
+  obsidian-relative-line-numbers = pkgs.callPackage ./pkgs/obsidian-relative-line-numbers {};
+  obsidian-scroll-offset = pkgs.callPackage ./pkgs/obsidian-scroll-offset {};
+  obsidian-style-settings = pkgs.callPackage ./pkgs/obsidian-style-settings {};
+  obsidian-vim-yank-highlight = pkgs.callPackage ./pkgs/obsidian-vim-yank-highlight {};
+  obsidian-vimrc-support = pkgs.callPackage ./pkgs/obsidian-vimrc-support {};
 }

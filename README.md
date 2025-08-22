@@ -4,12 +4,6 @@
 
 ## Setup
 
-1. Click on [Use this template](https://github.com/nix-community/nur-packages-template/generate) to start a repo based on this template. (Do _not_ fork it.)
-2. Add your packages to the [pkgs](./pkgs) directory and to
-   [default.nix](./default.nix)
-   * Remember to mark the broken packages as `broken = true;` in the `meta`
-     attribute, or travis (and consequently caching) will fail!
-   * Library functions, modules and overlays go in the respective directories
 3. Choose your CI: Depending on your preference you can use github actions (recommended) or [Travis ci](https://travis-ci.com).
    - Github actions: Change your NUR repo name and optionally add a cachix name in [.github/workflows/build.yml](./.github/workflows/build.yml) and change the cron timer
      to a random value as described in the file
