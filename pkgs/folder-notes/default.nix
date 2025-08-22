@@ -5,17 +5,17 @@
 }:
 pkgs.buildNpmPackage rec {
   pname = "folder-notes";
-  version = "1.8.5-2-beta";
+  version = "1.8.17";
 
   src = pkgs.fetchFromGitHub {
     owner = "LostPaul";
     repo = "obsidian-folder-notes";
     rev = version;
-    sha256 = "sha256-br064JcENELB1kwV+ySR8oHzWNpoMyK6ijqtDM3BGDc=";
+    sha256 = "sha256-iYVNWsNZcuXDDd/eUv02v29CH9GmsfYktjJBhMgmxZQ=";
     fetchSubmodules = true;
   };
 
-  npmDepsHash = "sha256-DpMuOGS6eolE8/XLN921y2cYGe7QWj9VVJkN9d79z3M=";
+  npmDepsHash = "sha256-XH2oElA4DyPqyr8zyVpomTGHmSs9Hz0e5EhyvZc552o=";
 
   npmBuildScript = "fn-build";
 
