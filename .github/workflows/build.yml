@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         nurRepo:
-          - https://github.com/Ev357/NUR
+          - Ev357
         cachixName:
           - ev357
         nixPath:
