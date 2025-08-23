@@ -28,5 +28,6 @@ pkgs.appimageTools.wrapType2 rec {
     homepage = "https://hayase.watch";
     changelog = "https://hayase.watch/changelog";
     license = lib.licenses.bsl11;
+    mainProgram = "hayase";
   };
 }
