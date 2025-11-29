@@ -14,7 +14,7 @@ pkgs.buildNpmPackage rec {
     sha256 = "sha256-gBN8oxiwoVGf7m3wP5M59g/lSw440jwtORY/TuLN8k4=";
   };
 
-  npmDepsHash = "sha256-0wGNuyB9sre3q7osZqhAkABr1USnrqJ44Wyzw5G9+IA=";
+  npmDepsHash = "sha256-uZufjktC0ce/3pzvnpzVsu4iUWPDDlfmZG5NNfv+u2o=";
 
   postPatch =
     # bash
