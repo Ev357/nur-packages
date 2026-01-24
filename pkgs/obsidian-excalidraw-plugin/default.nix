@@ -16,6 +16,12 @@ pkgs.buildNpmPackage rec {
 
   npmDepsHash = "sha256-Bg79GVpTeRczj8bqxLeePQGIR2Kkp/WzUxvPFwDSxBw=";
 
+  postPatch =
+    # bash
+    ''
+      cp ${./package-lock.json} package-lock.json
+    '';
+
   npmBuildScript = "build:all";
 
   installPhase =
