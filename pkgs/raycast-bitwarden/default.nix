@@ -1,4 +1,5 @@
 {
+  lib,
   buildNpmPackage,
   fetchgit,
   importNpmLock,
@@ -39,5 +40,11 @@ buildNpmPackage rec {
 
   env = {
     ELECTRON_SKIP_BINARY_DOWNLOAD = 1;
+  };
+
+  meta = {
+    description = "Access your Bitwarden vault directly from Raycast";
+    homepage = "https://www.raycast.com/jomifepe/bitwarden";
+    license = lib.licenses.mit;
   };
 }
