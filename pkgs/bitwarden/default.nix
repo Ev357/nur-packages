@@ -1,20 +1,17 @@
 {
   lib,
-  stdenv,
-  buildNpmPackage,
-  fetchgit,
-  importNpmLock,
+  pkgs,
   ...
 }:
-buildNpmPackage rec {
+pkgs.buildNpmPackage rec {
   pname = "bitwarden";
   version = "1.0.0";
 
-  src = stdenv.mkDerivation {
+  src = pkgs.stdenv.mkDerivation {
     pname = "${pname}-source";
     inherit version;
 
-    src = fetchgit {
+    src = pkgs.fetchgit {
       url = "https://github.com/raycast/extensions";
       rev = "4a6e46f1dae389a4f8c52f12eb5722542cdfe6f3";
       sha256 = "sha256-/kVt//0L7KnwDMTW/JzixTDWeAj/e36YOwT4OKYFUCU=";
@@ -31,8 +28,8 @@ buildNpmPackage rec {
 
   patches = [./windows-shortcut-casing.patch];
 
-  npmDeps = importNpmLock {npmRoot = src;};
-  npmConfigHook = importNpmLock.npmConfigHook;
+  npmDeps = pkgs.importNpmLock {npmRoot = src;};
+  npmConfigHook = pkgs.importNpmLock.npmConfigHook;
 
   installPhase =
     # bash
