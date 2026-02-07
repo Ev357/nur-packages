@@ -1,0 +1,43 @@
+{
+  buildNpmPackage,
+  fetchgit,
+  importNpmLock,
+  ...
+}:
+buildNpmPackage rec {
+  pname = "bitwarden";
+  version = "1.0.0";
+
+  src =
+    fetchgit {
+      url = "https://github.com/raycast/extensions";
+      rev = "4a6e46f1dae389a4f8c52f12eb5722542cdfe6f3";
+      sha256 = "sha256-/kVt//0L7KnwDMTW/JzixTDWeAj/e36YOwT4OKYFUCU=";
+      sparseCheckout = [
+        "/extensions/${pname}"
+      ];
+    }
+    + "/extensions/${pname}";
+
+  patches = [
+    ./windows-shortcut-casing.patch
+  ];
+
+  npmDeps = importNpmLock {npmRoot = src;};
+  npmConfigHook = importNpmLock.npmConfigHook;
+
+  installPhase =
+    # bash
+    ''
+      runHook preInstall
+
+      mkdir -p $out
+      cp -r /build/.config/raycast/extensions/${pname}/* $out/
+
+      runHook postInstall
+    '';
+
+  env = {
+    ELECTRON_SKIP_BINARY_DOWNLOAD = 1;
+  };
+}
