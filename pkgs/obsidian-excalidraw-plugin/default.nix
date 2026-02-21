@@ -38,7 +38,7 @@ in
         nix-update ${pname} --flake
       '';
 
-    npmDepsHash = "sha256-+cM55yoKRdPKka4XHrx8SSv5xASL2YDqtuLS5pZt73I=";
+    npmDepsHash = "sha256-eEczre9rTLlrJV1g/9HlUPr9ToyI+OG9eOIV9fxAOfg=";
 
     postPatch =
       # bash
