@@ -112,7 +112,7 @@ mkDerivation rec {
     lcms2
     gsl
     openexr
-    lager
+    (lager.override {boost = boost188;})
     libaom
     libheif
     giflib
