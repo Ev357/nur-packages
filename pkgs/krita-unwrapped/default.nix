@@ -18,7 +18,7 @@
   kio,
   kcrash,
   breeze-icons,
-  boost,
+  boost188,
   libraw,
   fftw,
   eigen,
@@ -103,7 +103,7 @@ mkDerivation rec {
     kio
     kcrash
     breeze-icons
-    boost
+    boost188
     libraw
     fftw
     eigen
