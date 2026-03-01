@@ -19,7 +19,7 @@ buildNpmPackage rec {
     }
     + "/extensions/${pname}";
 
-  npmDepsHash = "sha256-NG+2FZBqaZvWgrkBhzvkAJ8b4WaOTQoVqZ6cCu4BiZM=";
+  npmDepsHash = "sha256-jvocYE8POcfGSDCSpr015zB/5cCbx3jTaMyccO3AVIg=";
 
   installPhase =
     # bash
