@@ -5,20 +5,20 @@
     krita-plugin-gmic
   ],
   callPackage,
+  unwrapped ? callPackage ../krita-unwrapped {},
 }: let
-  krita-unwrapped = callPackage ../krita-unwrapped {};
 in
   symlinkJoin {
     pname = "krita";
     inherit
-      (krita-unwrapped)
+      (unwrapped)
       version
       buildInputs
       nativeBuildInputs
       meta
       ;
 
-    paths = [krita-unwrapped] ++ binaryPlugins;
+    paths = [unwrapped] ++ binaryPlugins;
 
     postBuild =
       # bash
@@ -29,7 +29,6 @@ in
       '';
 
     passthru = {
-      inherit binaryPlugins;
-      unwrapped = krita-unwrapped;
+      inherit unwrapped binaryPlugins;
     };
   }
