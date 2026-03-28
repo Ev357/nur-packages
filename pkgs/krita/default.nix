@@ -1,24 +1,23 @@
 {
-  lib,
-  libsForQt5,
   symlinkJoin,
-  unwrapped ? libsForQt5.callPackage ../krita-unwrapped {},
   krita-plugin-gmic,
   binaryPlugins ? [
     krita-plugin-gmic
   ],
+  callPackage,
+  krita-unwrapped ? callPackage ../krita-unwrapped {},
 }:
 symlinkJoin {
-  name = lib.replaceStrings ["-unwrapped"] [""] unwrapped.name;
+  pname = "krita";
   inherit
-    (unwrapped)
+    (krita-unwrapped)
     version
     buildInputs
     nativeBuildInputs
     meta
     ;
 
-  paths = [unwrapped] ++ binaryPlugins;
+  paths = [krita-unwrapped] ++ binaryPlugins;
 
   postBuild = ''
     wrapQtApp "$out/bin/krita" \
@@ -27,6 +26,7 @@ symlinkJoin {
   '';
 
   passthru = {
-    inherit unwrapped binaryPlugins;
+    inherit binaryPlugins;
+    unwrapped = krita-unwrapped;
   };
 }
