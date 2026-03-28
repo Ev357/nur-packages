@@ -6,29 +6,28 @@
   ],
   callPackage,
   unwrapped ? callPackage ../krita-unwrapped {},
-}: let
-in
-  symlinkJoin {
-    pname = "krita";
-    inherit
-      (unwrapped)
-      version
-      buildInputs
-      nativeBuildInputs
-      meta
-      ;
+}:
+symlinkJoin {
+  pname = "krita";
+  inherit
+    (unwrapped)
+    version
+    buildInputs
+    nativeBuildInputs
+    meta
+    ;
 
-    paths = [unwrapped] ++ binaryPlugins;
+  paths = [unwrapped] ++ binaryPlugins;
 
-    postBuild =
-      # bash
-      ''
-        wrapQtApp "$out/bin/krita" \
-          --prefix PYTHONPATH : "$PYTHONPATH" \
-          --set KRITA_PLUGIN_PATH "$out/lib/kritaplugins"
-      '';
+  postBuild =
+    # bash
+    ''
+      wrapQtApp "$out/bin/krita" \
+        --prefix PYTHONPATH : "$PYTHONPATH" \
+        --set KRITA_PLUGIN_PATH "$out/lib/kritaplugins"
+    '';
 
-    passthru = {
-      inherit unwrapped binaryPlugins;
-    };
-  }
+  passthru = {
+    inherit unwrapped binaryPlugins;
+  };
+}
