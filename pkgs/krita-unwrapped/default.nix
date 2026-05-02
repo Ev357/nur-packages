@@ -47,7 +47,7 @@ stdenv.mkDerivation rec {
     owner = "graphics";
     repo = "krita";
     rev = "4b513bc543aa1d63e40e69e922969892e0f644cf";
-    hash = "sha256-AzH1rZFqEH8sovZZfJykvsEmCedEZWigQFHWHl6/PdE=";
+    hash = "sha256-s9mZ9J2WZXm/e78sGHpzu7ijbqRtE0C4/WBreO2pK/E=";
   };
 
   passthru.updateScript =
