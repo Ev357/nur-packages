@@ -39,7 +39,7 @@ in
         nix-update ${pname} --flake
       '';
 
-    npmDepsHash = "sha256-WJIaclYVdxxWc1PgfpHHbqe4lQPwTMx1F1VJxG06Ko4=";
+    npmDepsHash = "sha256-Av0W3ws/o00zdIfQNIx6uxXHFHAGPVkiPqBwRdUUZV0=";
 
     patches =
       []
