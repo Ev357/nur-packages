@@ -15,7 +15,7 @@ pkgs.buildNpmPackage rec {
     fetchSubmodules = true;
   };
 
-  npmDepsHash = "sha256-YASHi1cwZnqg40t6VLoWxHARtmSa5qwS8kCBVueHhv0=";
+  npmDepsHash = "sha256-AvFXdZfdFhxpzMuQkoOGy6aztrz+AX4vyNVXR1lUI60=";
 
   npmBuildScript = "fn-build";
 
