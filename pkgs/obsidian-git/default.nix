@@ -39,9 +39,9 @@ stdenv.mkDerivation rec {
     '';
 
   pnpmDeps = pkgs.fetchPnpmDeps {
-    fetcherVersion = 3;
+    fetcherVersion = 4;
     inherit pname version src;
-    hash = "sha256-v9roDgzuElqrGm9UDsfvQ9mWUMI5Fe01kC1wMU1GlXk=";
+    hash = "sha256-mAs0HIlpxZvFlpWyeJhA6EVYHSw9QO5lCvPqT3Qi7yM=";
   };
 
   meta = {
