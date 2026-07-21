@@ -12,7 +12,7 @@ stdenv.mkDerivation {
     owner = "Ev357";
     repo = "alx-wol";
     rev = "583a78a44473bc67d37fc544008e16371fe04772";
-    sha256 = "sha256-Kuefu1PkABhXC77eoKl3UpLqet2eVHGRD1dvUICJdW4=";
+    sha256 = "9c83c1c435fa26fc5f84ad8045d11e06283b7bc6";
   };
 
   nativeBuildInputs = kernel.moduleBuildDependencies;
