@@ -45,11 +45,7 @@ stdenv.mkDerivation rec {
   pnpmDeps = pkgs.fetchPnpmDeps {
     fetcherVersion = 4;
     inherit pname version src;
-    hash = "sha256-hctb54tZ+CLBAdbDgzbJV2/P2399s3KGTheuAmDN/+M=";
-    preBuild = ''
-      jq '.pnpm.supportedArchitectures = { "os": ["linux", "darwin", "win32"], "cpu": ["x64", "arm64", "arm", "ia32"] }' package.json > package.json.tmp
-      mv package.json.tmp package.json
-    '';
+    hash = "sha256-EyL2qKNyhELaPIHPhVo96bo3tUIkNZ/Xo3/p8ppB5xE=";
   };
 
   meta = {
