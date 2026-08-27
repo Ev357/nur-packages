@@ -2,11 +2,11 @@
   lib,
   python3Packages,
   fetchFromGitHub,
+  makeWrapper,
 }:
 python3Packages.buildPythonApplication rec {
   pname = "flm-q4nx-converter";
   version = "unstable-2026-08-27";
-
   format = "other";
 
   src = fetchFromGitHub {
@@ -15,6 +15,13 @@ python3Packages.buildPythonApplication rec {
     rev = "dd0993cc0801c6ef98fbd57d64b8895c0730517f";
     sha256 = "sha256-k5PHQBoyRvmR8RMq5p89x+OGZiNs/Xj/58/OrYSYpyQ=";
   };
+
+  dontConfigure = true;
+  dontBuild = true;
+
+  nativeBuildInputs = [
+    makeWrapper
+  ];
 
   propagatedBuildInputs = with python3Packages; [
     einops
