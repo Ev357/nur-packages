@@ -4,7 +4,7 @@
   fetchFromGitHub,
 }:
 python3Packages.buildPythonApplication rec {
-  pname = "flm-add";
+  pname = "flm-q4nx-converter";
   version = "unstable-2026-08-27";
 
   format = "other";
