@@ -42,7 +42,8 @@ in
         nix-update ${pname} --flake --version=unstable
       '';
 
-    npmDepsHash = "sha256-1spORYHMVbIqAgxYWmpDZvLl58NNTiyZvQ6agOcF4+U=";
+    npmDepsFetcherVersion = 2;
+    npmDepsHash = "sha256-sdB+hgZe1h8AM5nOnNnYxNMBToONJUQ4FabrZh/4DFo=";
 
     patches =
       []
