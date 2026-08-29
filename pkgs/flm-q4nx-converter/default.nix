@@ -17,7 +17,6 @@ python3Packages.buildPythonApplication rec {
   };
 
   patches = [
-    ./hardcoded-argv.patch
     ./config-path.patch
   ];
 
