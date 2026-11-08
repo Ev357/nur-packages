@@ -45,9 +45,13 @@ stdenv.mkDerivation rec {
     ELECTRON_SKIP_BINARY_DOWNLOAD = 1;
   };
 
+  patches = [
+    ./supported-architectures.patch
+  ];
+
   pnpmDeps = fetchPnpmDeps {
     fetcherVersion = 4;
-    inherit pname version src;
+    inherit pname version src patches;
     hash = "sha256-d2YnBQogvcMQtfdefkO9rTv9B2aFq4qXDr6dGrKi4c0=";
   };
 

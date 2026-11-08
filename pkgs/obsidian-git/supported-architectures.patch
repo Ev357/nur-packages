@@ -1,0 +1,13 @@
+--- a/pnpm-workspace.yaml
++++ b/pnpm-workspace.yaml
+@@ -4,3 +4,10 @@ allowBuilds:
+   svelte-preprocess: true
+ patchedDependencies:
+   diff3@0.0.4: patches/diff3@0.0.4.patch
++
++supportedArchitectures:
++  os:
++    - linux
++  cpu:
++    - x64
++    - arm64
